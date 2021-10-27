@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-<<<<<<< HEAD
-const apikey = "yourapikeyhere";
-=======
 const apikey = "placeholderAPIkey";
->>>>>>> 2f7e267c36a976ff2dd5fce3dd4f0c3557e04bcb
 
 const Weather = () => {
   const [data, setData] = useState("");
