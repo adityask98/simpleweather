@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-const apikey = "959608dd6d9497f31f72191af0e39728";
+const apikey = "yourapikeyhere";
 
 const Weather = () => {
   const [data, setData] = useState("");
@@ -23,20 +23,26 @@ const Weather = () => {
     return (
       <div className="container">
         <div className="card">
+          <div className="city">{data.name}</div>
           <div className="weather">
-            Weather {(data.main.temp - 273.15).toPrecision(4)} C
+            It is now {(data.main.temp - 273.15).toPrecision(4)} °C
+            <div className="weatherfeelslike">
+              Feels like {(data.main.feels_like - 273.15).toPrecision(4)} °C
+            </div>
           </div>
-          <img
-            src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-            alt="icon"
-            width="80px"
-            height="80px"
-          ></img>
+          <div className="sun">
+            <img
+              src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+              alt="icon"
+              width="80px"
+              height="80px"
+            ></img>
+          </div>
         </div>
       </div>
     );
   } else {
-    return <h1>Loading</h1>;
+    return <h1 className="loading">Loading</h1>;
   }
 };
 

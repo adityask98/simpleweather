@@ -3,11 +3,15 @@ import { ReactDOM } from 'react';
 //import logo from './logo.svg';
 import Weather from "./Weather";
 import './App.css';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Navbar />
+      <div className="content">
+        <Weather />
+      </div>
     </div>
   );
 }

@@ -6,6 +6,15 @@ body {
   background: rgba(26, 188, 156, 1);
 }
 
+.App {
+  margin: 0;
+  padding: 0;
+  background: cornsilk;
+}
+
+.loading {
+  text-align: center;
+}
 .container {
   width: 100%;
   height: 100%;
@@ -42,6 +51,11 @@ body {
   font-size: 20px;
   line-height: 40px;
 }
+
+.weatherfeelslike {
+  font-size: 15px;
+  line-height: 40px;
+}
 .sun {
   position: absolute;
   display: inline;
@@ -66,6 +80,33 @@ body {
   margin-left: 25px;
   height: 80px;
   width: 80px;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+  color: #f1356d;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: #f1356d;
 }
 
 #sun {
